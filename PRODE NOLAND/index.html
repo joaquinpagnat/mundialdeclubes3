@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRODE NORLAND 2025</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #111;
+            color: #fff;
+        }
+        h1 {
+            color: #e74c3c;
+            text-align: center;
+            margin-bottom: 0;
+        }
+        h2 {
+            color: #fff;
+            text-align: center;
+            margin-top: 5px;
+        }
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px 0;
+        }
+        .logo-container img {
+            height: 180px;
+        }
+        .grupo {
+            background-color: #222;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(255,0,0,0.3);
+        }
+        .partido {
+            padding: 10px;
+            border-bottom: 1px solid #444;
+        }
+        .partido:last-child {
+            border-bottom: none;
+        }
+        .fecha {
+            font-weight: bold;
+            color: #bbb;
+        }
+        .equipos {
+            margin-top: 5px;
+            text-align: center;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .fase-title {
+            background-color: #e74c3c;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 30px;
+            text-align: center;
+        }
+        .resultado {
+            margin-top: 5px;
+            text-align: center;
+        }
+        .resultado input {
+            width: 40px;
+            padding: 5px;
+            text-align: center;
+            background-color: #000;
+            color: #fff;
+            border: 1px solid #555;
+            border-radius: 4px;
+        }
+        .user-form {
+            background-color: #333;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        .user-form input {
+            padding: 8px;
+            margin: 5px;
+            border-radius: 4px;
+            border: 1px solid #555;
+            background-color: #222;
+            color: #fff;
+        }
+        .action-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .action-buttons button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #e74c3c;
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .action-buttons button:hover {
+            background-color: #c0392b;
+        }
+        .saved-predictions {
+            background-color: #222;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        .saved-predictions h3 {
+            color: #e74c3c;
+            margin-top: 0;
+        }
+        .prediction-item {
+            padding: 8px;
+            border-bottom: 1px solid #444;
+        }
+        .prediction-item:last-child {
+            border-bottom: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="logo-container">
+    <img src="logo-blanco.png" alt="Logo">  
+    </div>
+    <h1>PRODE NORLAND 2025</h1>
+    <div class="logo-container">
+    </div>
+    <h2>MUNDIAL DE CLUBES 2025</h2>
+
+    <div class="user-form">
+        <h3>Ingresa tus datos</h3>
+        <input type="text" id="nombre" placeholder="Nombre" required>
+        <input type="text" id="apellido" placeholder="Apellido" required>
+    </div>
+
+    <h2 class="fase-title">📅 Fase de Grupos</h2>
+
+    <!-- Grupo A -->
+    <div class="grupo">
+        <h3>🟦 Grupo A</h3>
+        <div class="partido">
+            <div class="fecha">14 de junio</div>
+            <div class="equipos">Inter Miami vs. Al Ahly FC</div>
+            <div class="resultado">
+                <input type="number" min="0" max="20" placeholder="0" class="score-input"> - 
+                <input type="number" min="0" max="20" placeholder="0" class="score-input">
+            </div>
+        </div>
+        <div class="partido">
+            <div class="fecha">15 de junio</div>
+            <div class="equipos">Palmeiras vs. Porto</div>
+            <div class="resultado">
+                <input type="number" min="0" max="20" placeholder="0" class="score-input"> - 
+                <input type="number" min="0" max="20" placeholder="0" class="score-input">
+            </div>
+        </div>
+        <div class="partido">
+            <div class="fecha">19 de junio</div>
+            <div class="equipos">Palmeiras vs. Al Ahly</div>
+            <div class="resultado">
+                <input type="number" min="0" max="20" placeholder="0" class="score-input"> - 
+                <input type="number" min="0" max="20" placeholder="0" class="score-input">
+            </div>
+        </div>
+        <div class="partido">
+            <div class="fecha">19 de junio</div>
+            <div class="equipos">Inter Miami vs. Porto</div>
+            <div class="resultado">
+                <input type="number" min="0" max="20" placeholder="0" class="score-input"> - 
+                <input type="number" min="0" max="20" placeholder="0" class="score-input">
+            </div>
+        </div>
+        <div class="partido">
+            <div class="fecha">23 de junio</div>
+            <div class="equipos">Inter Miami vs. Palmeiras</div>
+            <div class="resultado">
+                <input type="number" min="0" max="20" placeholder="0" class="score-input"> - 
+                <input type="number" min="0" max="20" placeholder="0" class="score-input">
+            </div>
+        </div>
+        <div class="partido">
+            <div class="fecha">23 de junio</div>
+            <div class="equipos">Porto vs. Al Ahly</div>
+            <div class="resultado">
+                <input type="number" min="0" max="20" placeholder="0" class="score-input"> - 
+                <input type="number" min="0" max="20" placeholder="0" class="score-input">
+            </div>
+        </div>
+    </div>
+
+    <!-- Grupo B -->
+    <div class="grupo">
+        <h3>🔵 Grupo B</h3>
+        <div class="partido">
+            <div class="fecha">15 de junio</div>
+            <div class="equipos">PSG vs. Atlético de Madrid</div>
+            <div class="resultado">
+                <input type="number" min="0" max="20" placeholder="0" class="score-input"> - 
+                <input type="number" min="0" max="20" placeholder="0" class="score-input">
+            </div>
+        </div>
+        <div class="partido">
+            <div class="fecha">15 de junio</div>
+            <div class="equipos">Botafogo vs. Seattle Sounders</div>
+            <div class="resultado">
+                <input type="number" min="0" max="20" placeholder="0" class="score-input"> - 
+                <input type="number" min="0" max="20" placeholder="0" class="score-input">
+            </div>
+        </div>
+        <div class="partido">
+            <div class="fecha">19 de junio</div>
+            <div class="equipos">PSG vs. Botafogo</div>
+            <div class="resultado">
+                <input type="number" min="0" max="20" placeholder="0" class="score-input"> - 
+                <input type="number" min="0" max="20" placeholder="0" class="score-input">
+            </div>
+        </div>
+        <div class="partido">
+            <div class="fecha">19 de junio</div>
+            <div class="equipos">Seattle Sounders vs. Atlético de Madrid</div>
+            <div class="resultado">
+                <input type="number" min="0" max="20" placeholder="0" class="score-input"> - 
+                <input type="number" min="0" max="20" placeholder="0" class="score-input">
+            </div>
+        </div>
+        <div class="partido">
+            <div class="fecha">23 de junio</div>
+            <div class="equipos">Atlético de Madrid vs. Botafogo</div>
+            <div class="resultado">
+                <input type="number" min="0" max="20" placeholder="0" class="score-input"> - 
+                <input type="number" min="0" max="20" placeholder="0" class="score-input">
+            </div>
+        </div>
+        <div class="partido">
+            <div class="fecha">23 de junio</div>
+            <div class="equipos">Seattle Sounders vs. PSG</div>
+            <div class="resultado">
+                <input type="number" min="0" max="20" placeholder="0" class="score-input"> - 
+                <input type="number" min="0" max="20" placeholder="0" class="score-input">
+            </div>
+        </div>
+    </div>
+
+    <!-- Grupo C -->
+    <div class="grupo">
+        <h3>🟩 Grupo C</h3>
+        <div class="partido">
+            <div class="fecha">15 de junio</div>
+            <div class="equipos">Bayern Múnich vs. Auckland City</div>
+            <div class="resultado">
+                <input type="number" min="0" max="20" placeholder="0" class="score-input"> - 
+                <input type="number" min="0" max="20" placeholder="0" class="score-input">
+            </div>
+        </div>
+        <div class="partido">
+            <div class="fecha">16 de junio</div>
+            <div class="equipos">Boca Juniors vs. Benfica</div>
+            <div class="resultado">
+                <input type="number" min="0" max="20" placeholder="0" class="score-input"> - 
+                <input type="number" min="0" max="20" placeholder="0" class="score-input">
+            </div>
+        </div>
+        <div class="partido">
+            <div class="fecha">20 de junio</div>
+            <div class="equipos">Boca Juniors vs. Bayern Múnich</div>
+            <div class="resultado">
+                <input type="number" min="0" max="20" placeholder="0" class="score-input"> - 
+                <input type="number" min="0" max="20" placeholder="0" class="score-input">
+            </div>
+        </div>
+        <div class="partido">
+            <div class="fecha">20 de junio</div>
+            <div class="equipos">Benfica vs. Auckland City</div>
+            <div class="resultado">
+                <input type="number" min="0" max="20" placeholder="0" class="score-input"> - 
+                <input type="number" min="0" max="20" placeholder="0" class="score-input">
+            </div>
+        </div>
+        <div class="partido">
+            <div class="fecha">24 de junio</div>
+            <div class="equipos">Benfica vs. Bayern Múnich</div>
+            <div class="resultado">
+                <input type="number" min="0" max="20" placeholder="0" class="score-input"> - 
+                <input type="number" min="0" max="20" placeholder="0" class="score-input">
+            </div>
+        </div>
+        <div class="partido">
+            <div class="fecha">24 de junio</div>
+            <div class="equipos">Auckland City vs. Boca Juniors</div>
+            <div class="resultado">
+                <input type="number" min="0" max="20" placeholder="0" class="score-input"> - 
+                <input type="number" min="0" max="20" placeholder="0" class="score-input">
+            </div>
+        </div>
+    </div>
+
+    <!-- Grupo D -->
+    <div class="grupo">
+        <h3>🟨 Grupo D</h3>
+        <div class="partido">
+            <div class="fecha">16 de junio</div>
+            <div class="equipos">Flamengo vs. Espérance Sportive</div>
+            <div class="resultado">
+                <input type="number" min="0" max="20" placeholder="0" class="score-input"> - 
+                <input type="number" min="0" max="20" placeholder="0" class="score-input">
+            </div>
+        </div>
+        <div class="partido">
+            <div class="fecha">16 de junio</div>
+            <div class="equipos">Chelsea vs. León</div>
+            <div class="resultado">
+                <input type="number" min="0" max="20" placeholder="0" class="score-input"> - 
+                <input type="number" min="0" max="20" placeholder="0" class="score-input">
+            </div>
+        </div>
+        <div class="partido">
+            <div class="fecha">20 de junio</div>
+            <div class="equipos">Flamengo vs. Chelsea</div>
+            <div class="resultado">
+                <input type="number" min="0" max="20" placeholder="0" class="score-input"> - 
+                <input type="number" min="0" max="20" placeholder="0" class="score-input">
+            </div>
+        </div>
+        <div class="partido">
+            <div class="fecha">20 de junio</div>
+            <div class="equipos">León vs. Espérance Sportive</div>
+            <div class="resultado">
+                <input type="number" min="0" max="20" placeholder="0" class="score-input"> - 
+                <input type="number" min="0" max="20" placeholder="0" class="score-input">
+            </div>
+        </div>
+        <div class="partido">
+            <div class="fecha">24 de junio</div>
+            <div class="equipos">León vs. Flamengo</div>
+            <div class="resultado">
+                <input type="number" min="0" max="20" placeholder="0" class="score-input"> - 
+                <input type="number" min="0" max="20" placeholder="0" class="score-input">
+            </div>
+        </div>
+        <div class="partido">
+            <div class="fecha">24 de junio</div>
+            <div class="equipos">Espérance Sportive vs. Chelsea</div>
+            <div class="resultado">
+                <input type="number" min="0" max="20" placeholder="0" class="score-input"> - 
+                <input type="number" min="0" max="20" placeholder="0" class="score-input">
+            </div>
+        </div>
+    </div>
+
+    <!-- Grupo E -->
+    <div class="grupo">
+        <h3>🟪 Grupo E</h3>
+        <div class="partido">
+            <div class="fecha">17 de junio</div>
+            <div class="equipos">River Plate vs. Urawa Red Diamonds</div>
+            <div class="resultado">
+                <input type="number" min="0" max="20" placeholder="0" class="score-input"> - 
+                <input type="number" min="0" max="20" placeholder="0" class="score-input">
+            </div>
+        </div>
+        <div class="partido">
+            <div class="fecha">17 de junio</div>
+            <div class="equipos">Monterrey vs. Inter de Milán</div>
+            <div class="resultado">
+                <input type="number" min="0" max="20" placeholder="0" class="score-input"> - 
+                <input type="number" min="0" max="20" placeholder="0" class="score-input">
+            </div>
+        </div>
+        <div class="partido">
+            <div class="fecha">21 de junio</div>
+            <div class="equipos">River Plate vs. Monterrey</div>
+            <div class="resultado">
+                <input type="number" min="0" max="20" placeholder="0" class="score-input"> - 
+                <input type="number" min="0" max="20" placeholder="0" class="score-input">
+            </div>
+        </div>
+        <div class="partido">
+            <div class="fecha">21 de junio</div>
+            <div class="equipos">Inter de Milán vs. Urawa Red Diamonds</div>
+            <div class="resultado">
+                <input type="number" min="0" max="20" placeholder="0" class="score-input"> - 
+                <input type="number" min="0" max="20" placeholder="0" class="score-input">
+            </div>
+        </div>
+        <div class="partido">
+            <div class="fecha">25 de junio</div>
+            <div class="equipos">Inter de Milán vs. River Plate</div>
+            <div class="resultado">
+                <input type="number" min="0" max="20" placeholder="0" class="score-input"> - 
+                <input type="number" min="0" max="20" placeholder="0" class="score-input">
+            </div>
+        </div>
+        <div class="partido">
+            <div class="fecha">25 de junio</div>
+            <div class="equipos">Urawa Red Diamonds vs. Monterrey</div>
+            <div class="resultado">
+                <input type="number" min="0" max="20" placeholder="0" class="score-input"> - 
+                <input type="number" min="0" max="20" placeholder="0" class="score-input">
+            </div>
+        </div>
+    </div>
+
+    <!-- Grupo F -->
+    <div class="grupo">
+        <h3>🟧 Grupo F</h3>
+        <div class="partido">
+            <div class="fecha">17 de junio</div>
+            <div class="equipos">Fluminense vs. Borussia Dortmund</div>
+            <div class="resultado">
+                <input type="number" min="0" max="20" placeholder="0" class="score-input"> - 
+                <input type="number" min="0" max="20" placeholder="0" class="score-input">
+            </div>
+        </div>
+        <div class="partido">
+            <div class="fecha">17 de junio</div>
+            <div class="equipos">Ulsan Hyundai vs. Mamelodi Sundowns</div>
+            <div class="resultado">
+                <input type="number" min="0" max="20" placeholder="0" class="score-input"> - 
+                <input type="number" min="0" max="20" placeholder="0" class="score-input">
+            </div>
+        </div>
+        <div class="partido">
+            <div class="fecha">21 de junio</div>
+            <div class="equipos">Fluminense vs. Ulsan Hyundai</div>
+            <div class="resultado">
+                <input type="number" min="0" max="20" placeholder="0" class="score-input"> - 
+                <input type="number" min="0" max="20" placeholder="0" class="score-input">
+            </div>
+        </div>
+        <div class="partido">
+            <div class="fecha">21 de junio</div>
+            <div class="equipos">Mamelodi Sundowns vs. Borussia Dortmund</div>
+            <div class="resultado">
+                <input type="number" min="0" max="20" placeholder="0" class="score-input"> - 
+                <input type="number" min="0" max="20" placeholder="0" class="score-input">
+            </div>
+        </div>
+        <div class="partido">
+            <div class="fecha">25 de junio</div>
+            <div class="equipos">Mamelodi Sundowns vs. Fluminense</div>
+            <div class="resultado">
+                <input type="number" min="0" max="20" placeholder="0" class="score-input"> - 
+                <input type="number" min="0" max="20" placeholder="0" class="score-input">
+            </div>
+        </div>
+        <div class="partido">
+            <div class="fecha">25 de junio</div>
+            <div class="equipos">Borussia Dortmund vs. Ulsan Hyundai</div>
+            <div class="resultado">
+                <input type="number" min="0" max="20" placeholder="0" class="score-input"> - 
+                <input type="number" min="0" max="20" placeholder="0" class="score-input">
+            </div>
+        </div>
+    </div>
+
+    <!-- Grupo G -->
+    <div class="grupo">
+        <h3>🟨 Grupo G</h3>
+        <div class="partido">
+            <div class="fecha">18 de junio</div>
+            <div class="equipos">Manchester City vs. Wydad Casablanca</div>
+            <div class="resultado">
+                <input type="number" min="0" max="20" placeholder="0" class="score-input"> - 
+                <input type="number" min="0" max="20" placeholder="0" class="score-input">
+            </div>
+        </div>
+        <div class="partido">
+            <div class="fecha">18 de junio</div>
+            <div class="equipos">Al Ain vs. Juventus</div>
+            <div class="resultado">
+                <input type="number" min="0" max="20" placeholder="0" class="score-input"> - 
+                <input type="number" min="0" max="20" placeholder="0" class="score-input">
+            </div>
+        </div>
+        <div class="partido">
+            <div class="fecha">22 de junio</div>
+            <div class="equipos">Manchester City vs. Al Ain</div>
+            <div class="resultado">
+                <input type="number" min="0" max="20" placeholder="0" class="score-input"> - 
+                <input type="number" min="0" max="20" placeholder="0" class="score-input">
+            </div>
+        </div>
+        <div class="partido">
+            <div class="fecha">22 de junio</div>
+            <div class="equipos">Juventus vs. Wydad Casablanca</div>
+            <div class="resultado">
+                <input type="number" min="0" max="20" placeholder="0" class="score-input"> - 
+                <input type="number" min="0" max="20" placeholder="0" class="score-input">
+            </div>
+        </div>
+        <div class="partido">
+            <div class="fecha">26 de junio</div>
+            <div class="equipos">Juventus vs. Manchester City</div>
+            <div class="resultado">
+                <input type="number" min="0" max="20" placeholder="0" class="score-input"> - 
+                <input type="number" min="0" max="20" placeholder="0" class="score-input">
+            </div>
+        </div>
+        <div class="partido">
+            <div class="fecha">26 de junio</div>
+            <div class="equipos">Wydad Casablanca vs. Al Ain</div>
+            <div class="resultado">
+                <input type="number" min="0" max="20" placeholder="0" class="score-input"> - 
+                <input type="number" min="0" max="20" placeholder="0" class="score-input">
+            </div>
+        </div>
+    </div>
+
+    <!-- Grupo H -->
+    <div class="grupo">
+        <h3>🟩 Grupo H</h3>
+        <div class="partido">
+            <div class="fecha">18 de junio</div>
+            <div class="equipos">Real Madrid vs. Al Hilal</div>
+            <div class="resultado">
+                <input type="number" min="0" max="20" placeholder="0" class="score-input"> - 
+                <input type="number" min="0" max="20" placeholder="0" class="score-input">
+            </div>
+        </div>
+        <div class="partido">
+            <div class="fecha">18 de junio</div>
+            <div class="equipos">Pachuca vs. FC Salzburgo</div>
+            <div class="resultado">
+                <input type="number" min="0" max="20" placeholder="0" class="score-input"> - 
+                <input type="number" min="0" max="20" placeholder="0" class="score-input">
+            </div>
+        </div>
+        <div class="partido">
+            <div class="fecha">22 de junio</div>
+            <div class="equipos">Real Madrid vs. Pachuca</div>
+            <div class="resultado">
+                <input type="number" min="0" max="20" placeholder="0" class="score-input"> - 
+                <input type="number" min="0" max="20" placeholder="0" class="score-input">
+            </div>
+        </div>
+        <div class="partido">
+            <div class="fecha">22 de junio</div>
+            <div class="equipos">FC Salzburgo vs. Al Hilal</div>
+            <div class="resultado">
+                <input type="number" min="0" max="20" placeholder="0" class="score-input"> - 
+                <input type="number" min="0" max="20" placeholder="0" class="score-input">
+            </div>
+        </div>
+        <div class="partido">
+            <div class="fecha">26 de junio</div>
+            <div class="equipos">Real Madrid vs. FC Salzburgo</div>
+            <div class="resultado">
+                <input type="number" min="0" max="20" placeholder="0" class="score-input"> - 
+                <input type="number" min="0" max="20" placeholder="0" class="score-input">
+            </div>
+        </div>
+        <div class="partido">
+            <div class="fecha">26 de junio</div>
+            <div class="equipos">Al Hilal vs. Pachuca</div>
+            <div class="resultado">
+                <input type="number" min="0" max="20" placeholder="0" class="score-input"> - 
+                <input type="number" min="0" max="20" placeholder="0" class="score-input">
+            </div>
+        </div>
+    </div>
+
+    <div class="action-buttons">
+        <button id="guardar-btn">Guardar Pronósticos</button>
+        <button id="descargar-txt">Descargar TXT</button>
+        <button id="descargar-img">Descargar IMG</button>
+    </div>
+
+    <div class="saved-predictions">
+        <h3>Pronósticos Guardados</h3>
+        <div id="predicciones-lista"></div>
+    </div>
+
+    <script>
+        // Array para almacenar las predicciones
+        const predicciones = [];
+        
+        // Obtener elementos del DOM
+        const nombreInput = document.getElementById('nombre');
+        const apellidoInput = document.getElementById('apellido');
+        const guardarBtn = document.getElementById('guardar-btn');
+        const descargarTxtBtn = document.getElementById('descargar-txt');
+        const descargarImgBtn = document.getElementById('descargar-img');
+        const prediccionesLista = document.getElementById('predicciones-lista');
+        
+        // Función para guardar los pronósticos
+        guardarBtn.addEventListener('click', () => {
+            const nombre = nombreInput.value.trim();
+            const apellido = apellidoInput.value.trim();
+            
+            if (!nombre || !apellido) {
+                alert('Por favor ingresa tu nombre y apellido');
+                return;
+            }
+            
+            // Obtener todos los resultados
+            const scoreInputs = document.querySelectorAll('.score-input');
+            const resultados = [];
+            
+            // Recorrer todos los grupos y partidos para obtener los resultados
+            document.querySelectorAll('.grupo').forEach(grupo => {
+                const grupoNombre = grupo.querySelector('h3').textContent;
+                const partidos = grupo.querySelectorAll('.partido');
+                
+                partidos.forEach(partido => {
+                    const fecha = partido.querySelector('.fecha').textContent;
+                    const equipos = partido.querySelector('.equipos').textContent;
+                    const inputs = partido.querySelectorAll('.score-input');
+                    const local = inputs[0].value || '0';
+                    const visitante = inputs[1].value || '0';
+                    
+                    resultados.push({
+                        grupo: grupoNombre,
+                        fecha,
+                        equipos,
+                        resultado: `${local}-${visitante}`
+                    });
+                });
+            });
+            
+            // Crear objeto de predicción
+            const prediccion = {
+                usuario: `${nombre} ${apellido}`,
+                fecha: new Date().toLocaleString(),
+                resultados
+            };
+            
+            // Agregar a la lista de predicciones
+            predicciones.push(prediccion);
+            actualizarListaPredicciones();
+            
+            alert('Pronósticos guardados correctamente');
+        });
+        
+        // Función para actualizar la lista de predicciones guardadas
+        function actualizarListaPredicciones() {
+            prediccionesLista.innerHTML = '';
+            
+            if (predicciones.length === 0) {
+                prediccionesLista.innerHTML = '<p>No hay pronósticos guardados aún</p>';
+                return;
+            }
+            
+            predicciones.forEach((pred, index) => {
+                const predItem = document.createElement('div');
+                predItem.className = 'prediction-item';
+                predItem.innerHTML = `
+                    <strong>${pred.usuario}</strong> - ${pred.fecha}
+                    <button onclick="verDetalles(${index})">Ver detalles</button>
+                    <button onclick="eliminarPrediccion(${index})">Eliminar</button>
+                `;
+                prediccionesLista.appendChild(predItem);
+            });
+        }
+        
+        // Función para ver detalles de una predicción
+        window.verDetalles = function(index) {
+            const pred = predicciones[index];
+            let detalles = `Pronósticos de ${pred.usuario} (${pred.fecha}):\n\n`;
+            
+            pred.resultados.forEach(res => {
+                detalles += `${res.grupo} - ${res.fecha}: ${res.equipos} => ${res.resultado}\n`;
+            });
+            
+            alert(detalles);
+        };
+        
+        // Función para eliminar una predicción
+        window.eliminarPrediccion = function(index) {
+            if (confirm('¿Estás seguro de eliminar esta predicción?')) {
+                predicciones.splice(index, 1);
+                actualizarListaPredicciones();
+            }
+        };
+        
+        // Función para descargar en formato TXT
+        descargarTxtBtn.addEventListener('click', () => {
+            if (predicciones.length === 0) {
+                alert('No hay pronósticos para descargar');
+                return;
+            }
+            
+            let contenido = 'PRONÓSTICOS MUNDIAL DE CLUBES 2025\n\n';
+            
+            predicciones.forEach(pred => {
+                contenido += `Pronósticos de: ${pred.usuario}\n`;
+                contenido += `Fecha: ${pred.fecha}\n\n`;
+                
+                pred.resultados.forEach(res => {
+                    contenido += `${res.grupo} - ${res.fecha}: ${res.equipos} => ${res.resultado}\n`;
+                });
+                
+                contenido += '\n--------------------------------\n\n';
+            });
+            
+            const blob = new Blob([contenido], { type: 'text/plain' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `pronosticos_mundial_${new Date().toISOString().split('T')[0]}.txt`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        });
+        
+        // Función para descargar en formato IMG (captura de pantalla)
+        descargarImgBtn.addEventListener('click', () => {
+            if (predicciones.length === 0) {
+                alert('No hay pronósticos para descargar');
+                return;
+            }
+            
+            // Crear un canvas con los datos
+            const canvas = document.createElement('canvas');
+            const ctx = canvas.getContext('2d');
+            canvas.width = 800;
+            canvas.height = 600;
+            
+            // Fondo
+            ctx.fillStyle = '#111';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            
+            // Texto
+            ctx.fillStyle = '#fff';
+            ctx.font = '20px Arial';
+            ctx.fillText('PRONÓSTICOS MUNDIAL DE CLUBES 2025', 50, 40);
+            
+            let yPos = 80;
+            predicciones.forEach(pred => {
+                ctx.font = '16px Arial';
+                ctx.fillStyle = '#e74c3c';
+                ctx.fillText(`Pronósticos de: ${pred.usuario}`, 50, yPos);
+                ctx.fillStyle = '#fff';
+                ctx.fillText(`Fecha: ${pred.fecha}`, 50, yPos + 25);
+                yPos += 50;
+                
+                ctx.font = '14px Arial';
+                pred.resultados.forEach(res => {
+                    ctx.fillText(`${res.grupo} - ${res.fecha}: ${res.equipos} => ${res.resultado}`, 70, yPos);
+                    yPos += 25;
+                });
+                
+                yPos += 30;
+            });
+            
+            // Convertir a imagen y descargar
+            const dataURL = canvas.toDataURL('image/png');
+            const a = document.createElement('a');
+            a.href = dataURL;
+            a.download = `pronosticos_mundial_${new Date().toISOString().split('T')[0]}.png`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        });
+        
+        // Inicializar lista de predicciones
+        actualizarListaPredicciones();
+    </script>
+</body>
+</html>
